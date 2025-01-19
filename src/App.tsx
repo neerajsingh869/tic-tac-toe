@@ -18,7 +18,20 @@ function findWinner(squares: string[]): string {
     }
   }
 
-  return '';
+  return "";
+}
+
+interface SquareProps {
+  value: string;
+  onSquareClick: () => void;
+}
+
+function Square({ value, onSquareClick }: SquareProps) {
+  return (
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
+  );
 }
 
 function App() {
