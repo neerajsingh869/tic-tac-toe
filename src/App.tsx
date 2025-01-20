@@ -80,7 +80,7 @@ function Game() {
   const moves = history.map((_, move) => {
     let description: string;
     if (move > 0) {
-      description = "Go to #" + move;
+      description = "Go to move #" + move;
     } else {
       description = "Go to game start";
     }
