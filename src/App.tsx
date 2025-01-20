@@ -1,19 +1,8 @@
 import { useState } from "react";
 
-type Squares = (string | null)[];
+import { BoardProps, SquareProps, Squares, SquareValue } from "./types";
 
-interface SquareProps {
-  value: string | null;
-  onSquareClick: () => void;
-}
-
-interface BoardProps {
-  squares: Squares;
-  onPlay: (squares: Squares) => void;
-  isXNext: boolean;
-}
-
-function findWinner(squares: Squares): string | null {
+function findWinner(squares: Squares): SquareValue {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
